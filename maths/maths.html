@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ಗಣಿತ ಸೂತ್ರಗಳು | Maths Formulas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f8e9;
+      margin: 0;
+      text-align: center;
+      color: #222;
+    }
+    .navb {
+      background:#4CAF50;color:#fff;padding:14px 0;margin:0;
+    }
+    .navb h1{margin:0;font-size:24px}
+    .back-btn{display:inline-block;margin:14px;padding:8px 14px;background:#4CAF50;color:#fff;border-radius:6px;text-decoration:none;font-weight:600}
+    .topics{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:14px}
+    .topics button{padding:10px 14px;border:0;border-radius:8px;color:#fff;cursor:pointer;font-size:15px;transition:transform .14s}
+    .topics button:hover{transform:scale(1.05)}
+    /* colors */
+
+        button{background:#6fe78d}
+
+/*         
+    .btn-addition{background:#ff5733}.btn-subtraction{background:#3498db}.btn-multiplication{background:#f39c12}
+    .btn-division{background:#9b59b6}.btn-geometry{background:#1abc9c}.btn-algebra{background:#34495e}
+    .btn-fractions{background:#8e44ad}.btn-decimals{background:#2ecc71}.btn-percentage{background:#e67e22}
+    .btn-ratio{background:#16a085}.btn-proportion{background:#c0392b}.btn-lcm{background:#2980b9}
+    .btn-hcf{background:#d35400}.btn-si{background:#8e44ad}.btn-ci{background:#2c3e50}
+    .btn-sdt{background:#27ae60}.btn-profit{background:#d3544f}.btn-loss{background:#7f8c8d}
+    .btn-prime{background:#27ae60}.btn-comp{background:#2980b9}.btn-fact{background:#9b59b6}
+    .btn-evenodd{background:#f39c12}.btn-square{background:#16a085}.btn-cube{background:#8e44ad}
+    .btn-sqrt{background:#e67e22}.btn-cubert{background:#2c3e50}.btn-prob{background:#34495e}
+    .btn-mean{background:#1abc9c}.btn-median{background:#c0392b}.btn-mode{background:#2980b9}
+    .btn-bar{background:#8e44ad}.btn-pie{background:#27ae60}.btn-histo{background:#e67e22}
+    .btn-tri{background:#d35400}.btn-angle{background:#9b59b6}.btn-area{background:#16a085}
+    .btn-perimeter{background:#2c3e50}.btn-volume{background:#8e44ad}.btn-sarea{background:#f39c12}
+    .btn-coord{background:#2980b9}.btn-linear{background:#27ae60}.btn-quadratic{background:#c0392b}
+    .btn-aseq{background:#2c3e50}.btn-gseq{background:#8e44ad}.btn-pattern{background:#16a085}
+    .btn-sym{background:#e67e22}.btn-mens{background:#34495e}.btn-timework{background:#2980b9}
+    .btn-advprop{background:#8e44ad}.btn-trig{background:#27ae60}.btn-algid{background:#c0392b} */
+
+    .content{
+      display:none;
+      max-width:920px;
+      margin:18px auto;
+      padding:18px;
+      text-align:left;
+      background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.08);line-height:1.6;font-size:16px;
+    }
+    .content.active{display:block}
+    h2{margin-top:0;color:#2e7d32}
+    b{color:#222}
+    @media (max-width:720px){.topics button{font-size:13px;padding:8px 10px}}
+  </style>
+  <script>
+    function showContent(id){
+      document.querySelectorAll('.content').forEach(c=>c.classList.remove('active'));
+      const el=document.getElementById(id);
+      if(el) el.classList.add('active');
+      window.scrollTo({top:200,behavior:'smooth'});
+    }
+    window.onload=()=>{ /* show first topic by default */ };
+  </script>
+</head>
+<body>
+  <!-- <div class="navb"> -->
+    <h1 style ="color:green">📗 ಗಣಿತ ಸೂತ್ರಗಳು | Maths Formulas</h1>
+  <!-- </div> -->
+  <a class="back-btn" href="../index.html">⬅ Back to Home</a>
+
+  <div class="topics">
+    <!-- 1-16 -->
+    <button class="btn-addition" onclick="showContent('addition')">Addition</button>
+    <button class="btn-subtraction" onclick="showContent('subtraction')">Subtraction</button>
+    <button class="btn-multiplication" onclick="showContent('multiplication')">Multiplication</button>
+    <button class="btn-division" onclick="showContent('division')">Division</button>
+    <button class="btn-geometry" onclick="showContent('geometry')">Geometry</button>
+    <button class="btn-algebra" onclick="showContent('algebra')">Algebra</button>
+
+    <button class="btn-fractions" onclick="showContent('fractions')">Fractions</button>
+    <button class="btn-decimals" onclick="showContent('decimals')">Decimals</button>
+    <button class="btn-percentage" onclick="showContent('percentage')">Percentage</button>
+    <button class="btn-ratio" onclick="showContent('ratio')">Ratio</button>
+    <button class="btn-proportion" onclick="showContent('proportion')">Proportion</button>
+    <button class="btn-lcm" onclick="showContent('lcm')">LCM</button>
+
+    <button class="btn-hcf" onclick="showContent('hcf')">HCF</button>
+    <button class="btn-si" onclick="showContent('si')">Simple Interest</button>
+    <button class="btn-ci" onclick="showContent('ci')">Compound Interest</button>
+    <button class="btn-sdt" onclick="showContent('sdt')">Speed/Distance/Time</button>
+
+    <!-- 17-32 -->
+    <button class="btn-profit" onclick="showContent('profit')">Profit</button>
+    <button class="btn-loss" onclick="showContent('loss')">Loss</button>
+    <button class="btn-prime" onclick="showContent('prime')">Prime Numbers</button>
+    <button class="btn-comp" onclick="showContent('composite')">Composite Numbers</button>
+    <button class="btn-fact" onclick="showContent('factors')">Factors & Multiples</button>
+    <button class="btn-evenodd" onclick="showContent('evenodd')">Even & Odd</button>
+
+    <button class="btn-square" onclick="showContent('square')">Square Numbers</button>
+    <button class="btn-cube" onclick="showContent('cube')">Cube Numbers</button>
+    <button class="btn-sqrt" onclick="showContent('sqrt')">Square Root</button>
+    <button class="btn-cubert" onclick="showContent('cubert')">Cube Root</button>
+    <button class="btn-prob" onclick="showContent('probability')">Probability</button>
+    <button class="btn-mean" onclick="showContent('mean')">Mean</button>
+
+    <!-- 33-48 -->
+    <button class="btn-median" onclick="showContent('median')">Median</button>
+    <button class="btn-mode" onclick="showContent('mode')">Mode</button>
+    <button class="btn-bar" onclick="showContent('bargraph')">Bar Graph</button>
+    <button class="btn-pie" onclick="showContent('piechart')">Pie Chart</button>
+    <button class="btn-histo" onclick="showContent('histogram')">Histogram</button>
+    <button class="btn-tri" onclick="showContent('triangles')">Triangles</button>
+
+    <button class="btn-angle" onclick="showContent('angles')">Angles</button>
+    <button class="btn-area" onclick="showContent('area')">Area</button>
+    <button class="btn-perimeter" onclick="showContent('perimeter')">Perimeter</button>
+    <button class="btn-volume" onclick="showContent('volume')">Volume</button>
+    <button class="btn-sarea" onclick="showContent('surfacearea')">Surface Area</button>
+    <button class="btn-coord" onclick="showContent('coordinates')">Coordinate Geometry</button>
+
+    <!-- 49-64 -->
+    <button class="btn-linear" onclick="showContent('linear')">Linear Equations</button>
+    <button class="btn-quadratic" onclick="showContent('quadratic')">Quadratic Equations</button>
+    <button class="btn-aseq" onclick="showContent('arithseq')">Arithmetic Sequence</button>
+    <button class="btn-gseq" onclick="showContent('geogseq')">Geometric Sequence</button>
+    <button class="btn-pattern" onclick="showContent('patterns')">Number Patterns</button>
+    <button class="btn-sym" onclick="showContent('symmetry')">Symmetry</button>
+
+    <button class="btn-mens" onclick="showContent('mensuration')">Mensuration</button>
+    <button class="btn-timework" onclick="showContent('timework')">Time & Work</button>
+    <button class="btn-advprop" onclick="showContent('advprop')">Ratio & Proportion (Adv)</button>
+    <button class="btn-trig" onclick="showContent('trigonometry')">Trigonometry (Basic)</button>
+    <button class="btn-algid" onclick="showContent('algidentities')">Algebraic Identities</button>
+  </div>
+
+  <!-- CONTENT SECTIONS (concise; inline grey examples) -->
+
+  <div id="addition" class="content">
+    <h2><u>Addition</u></h2>
+    <p>Addition combines numbers to get a sum.<br><br>
+      <b>Example:</b> <span style="color:#777;">3 + 5 = 8</span>
+    </p>
+  </div>
+
+  <div id="subtraction" class="content">
+    <h2><u>Subtraction</u></h2>
+    <p>Subtraction finds the difference between numbers.<br><br>
+      <b>Example:</b> <span style="color:#777;">8 - 3 = 5</span>
+    </p>
+  </div>
+
+  <div id="multiplication" class="content">
+    <h2><u>Multiplication</u></h2>
+    <p>Repeated addition; product of numbers.<br><br>
+      <b>Example:</b> <span style="color:#777;">4 × 3 = 12</span>
+    </p>
+  </div>
+
+  <div id="division" class="content">
+    <h2><u>Division</u></h2>
+    <p>Splitting into equal parts; quotient.<br><br>
+      <b>Example:</b> <span style="color:#777;">12 ÷ 3 = 4</span>
+    </p>
+  </div>
+
+  <div id="geometry" class="content">
+    <h2><u>Geometry</u></h2>
+    <p>Study of shapes, sizes and space.<br><br>
+      <b>Examples:</b> <span style="color:#777;">Area= l×w; Circle area = πr²</span>
+    </p>
+  </div>
+
+  <div id="algebra" class="content">
+    <h2><u>Algebra</u></h2>
+    <p>Use of letters to represent numbers.<br><br>
+      <b>Identity:</b> <span style="color:#777;">(a+b)² = a²+2ab+b²</span>
+    </p>
+  </div>
+
+  <div id="fractions" class="content">
+    <h2><u>Fractions</u></h2>
+    <p>Part of a whole written as numerator/denominator.<br><br>
+      <b>Example:</b> <span style="color:#777;">1/4, 3/8</span>
+    </p>
+  </div>
+
+  <div id="decimals" class="content">
+    <h2><u>Decimals</u></h2>
+    <p>Numbers with a decimal point; place value matters.<br><br>
+      <b>Example:</b> <span style="color:#777;">3.14, 0.25</span>
+    </p>
+  </div>
+
+  <div id="percentage" class="content">
+    <h2><u>Percentage</u></h2>
+    <p>Number out of 100; % symbol.<br><br>
+      <b>Example:</b> <span style="color:#777;">20% of 50 = 10</span>
+    </p>
+  </div>
+
+  <div id="ratio" class="content">
+    <h2><u>Ratio</u></h2>
+    <p>Comparison of two quantities using ':'<br><br>
+      <b>Example:</b> <span style="color:#777;">Boys:Girls = 3:2</span>
+    </p>
+  </div>
+
+  <div id="proportion" class="content">
+    <h2><u>Proportion</u></h2>
+    <p>Two ratios that are equal.<br><br>
+      <b>Example:</b> <span style="color:#777;">2:4 = 3:6</span>
+    </p>
+  </div>
+
+  <div id="lcm" class="content">
+    <h2><u>LCM</u></h2>
+    <p>Least Common Multiple of numbers.<br><br>
+      <b>Example:</b> <span style="color:#777;">LCM(3,4)=12</span>
+    </p>
+  </div>
+
+  <div id="hcf" class="content">
+    <h2><u>HCF</u></h2>
+    <p>Highest Common Factor (GCD).<br><br>
+      <b>Example:</b> <span style="color:#777;">HCF(12,18)=6</span>
+    </p>
+  </div>
+
+  <div id="si" class="content">
+    <h2><u>Simple Interest</u></h2>
+    <p>Interest on principal only.<br><br>
+      <b>Formula:</b> <span style="color:#777;">SI=(P×R×T)/100</span>
+    </p>
+  </div>
+
+  <div id="ci" class="content">
+    <h2><u>Compound Interest</u></h2>
+    <p>Interest on principal + accumulated interest.<br><br>
+      <b>Formula:</b> <span style="color:#777;">A=P(1+R/100)^T</span>
+    </p>
+  </div>
+
+  <div id="sdt" class="content">
+    <h2><u>Speed / Distance / Time</u></h2>
+    <p>Relationships between speed, distance & time.<br><br>
+      <b>Formula:</b> <span style="color:#777;">speed=distance/time</span>
+    </p>
+  </div>
+
+  <div id="profit" class="content">
+    <h2><u>Profit</u></h2>
+    <p>When selling price > cost price.<br><br>
+      <b>Example:</b> <span style="color:#777;">SP 150, CP 100 → Profit 50</span>
+    </p>
+  </div>
+
+  <div id="loss" class="content">
+    <h2><u>Loss</u></h2>
+    <p>When cost price > selling price.<br><br>
+      <b>Example:</b> <span style="color:#777;">CP 100, SP 80 → Loss 20</span>
+    </p>
+  </div>
+
+  <div id="prime" class="content">
+    <h2><u>Prime Numbers</u></h2>
+    <p>Numbers with exactly two distinct positive divisors.<br><br>
+      <b>Example:</b> <span style="color:#777;">2,3,5,7</span>
+    </p>
+  </div>
+
+  <div id="composite" class="content">
+    <h2><u>Composite Numbers</u></h2>
+    <p>Numbers with more than two factors.<br><br>
+      <b>Example:</b> <span style="color:#777;">4,6,8,9</span>
+    </p>
+  </div>
+
+  <div id="factors" class="content">
+    <h2><u>Factors & Multiples</u></h2>
+    <p>Factors divide the number; multiples are repeated sums.<br><br>
+      <b>Example:</b> <span style="color:#777;">Factors of 12: 1,2,3,4,6,12</span>
+    </p>
+  </div>
+
+  <div id="evenodd" class="content">
+    <h2><u>Even & Odd</u></h2>
+    <p>Even divisible by 2; odd not divisible by 2.<br><br>
+      <b>Example:</b> <span style="color:#777;">12 even, 13 odd</span>
+    </p>
+  </div>
+
+  <div id="square" class="content">
+    <h2><u>Square Numbers</u></h2>
+    <p>Number × itself.<br><br>
+      <b>Example:</b> <span style="color:#777;">5²=25</span>
+    </p>
+  </div>
+
+  <div id="cube" class="content">
+    <h2><u>Cube Numbers</u></h2>
+    <p>Number × itself × itself.<br><br>
+      <b>Example:</b> <span style="color:#777;">3³=27</span>
+    </p>
+  </div>
+
+  <div id="sqrt" class="content">
+    <h2><u>Square Root</u></h2>
+    <p>Number which when squared gives original.<br><br>
+      <b>Example:</b> <span style="color:#777;">√25=5</span>
+    </p>
+  </div>
+
+  <div id="cubert" class="content">
+    <h2><u>Cube Root</u></h2>
+    <p>Number which when cubed gives original.<br><br>
+      <b>Example:</b> <span style="color:#777;">³√27=3</span>
+    </p>
+  </div>
+
+  <div id="probability" class="content">
+    <h2><u>Probability</u></h2>
+    <p>Chance of an event = favourable/total outcomes.<br><br>
+      <b>Example:</b> <span style="color:#777;">P(head)=1/2</span>
+    </p>
+  </div>
+
+  <div id="mean" class="content">
+    <h2><u>Mean</u></h2>
+    <p>Arithmetic average of numbers.<br><br>
+      <b>Example:</b> <span style="color:#777;">(2+4+6)/3=4</span>
+    </p>
+  </div>
+
+  <div id="median" class="content">
+    <h2><u>Median</u></h2>
+    <p>Middle value in ordered list.<br><br>
+      <b>Example:</b> <span style="color:#777;">2,5,9 → median=5</span>
+    </p>
+  </div>
+
+  <div id="mode" class="content">
+    <h2><u>Mode</u></h2>
+    <p>Most frequent value in data.<br><br>
+      <b>Example:</b> <span style="color:#777;">3,3,5 → mode=3</span>
+    </p>
+  </div>
+
+  <div id="bargraph" class="content">
+    <h2><u>Bar Graph</u></h2>
+    <p>Rectangular bars show quantities.<br><br>
+      <b>Example:</b> <span style="color:#777;">Monthly sales</span>
+    </p>
+  </div>
+
+  <div id="piechart" class="content">
+    <h2><u>Pie Chart</u></h2>
+    <p>Circular chart divided into sectors to show proportions.<br><br>
+      <b>Example:</b> <span style="color:#777;">Budget split</span>
+    </p>
+  </div>
+
+  <div id="histogram" class="content">
+    <h2><u>Histogram</u></h2>
+    <p>Graph of frequency distribution using adjacent bars.<br><br>
+      <b>Example:</b> <span style="color:#777;">Heights of students</span>
+    </p>
+  </div>
+
+  <div id="triangles" class="content">
+    <h2><u>Triangles</u></h2>
+    <p>3-sided polygons: equilateral, isosceles, scalene.<br><br>
+      <b>Example:</b> <span style="color:#777;">Sum of angles = 180°</span>
+    </p>
+  </div>
+
+  <div id="angles" class="content">
+    <h2><u>Angles</u></h2>
+    <p>Measure of rotation between two rays.<br><br>
+      <b>Example:</b> <span style="color:#777;">Right=90°, Acute<90°</span>
+    </p>
+  </div>
+
+  <div id="area" class="content">
+    <h2><u>Area</u></h2>
+    <p>Space inside a 2D shape.<br><br>
+      <b>Example:</b> <span style="color:#777;">Rectangle=l×w</span>
+    </p>
+  </div>
+
+  <div id="perimeter" class="content">
+    <h2><u>Perimeter</u></h2>
+    <p>Total boundary length of a shape.<br><br>
+      <b>Example:</b> <span style="color:#777;">Square=4a</span>
+    </p>
+  </div>
+
+  <div id="volume" class="content">
+    <h2><u>Volume</u></h2>
+    <p>Space occupied by a 3D object.<br><br>
+      <b>Example:</b> <span style="color:#777;">Cube=a³</span>
+    </p>
+  </div>
+
+  <div id="surfacearea" class="content">
+    <h2><u>Surface Area</u></h2>
+    <p>Total area of outer surfaces of 3D object.<br><br>
+      <b>Example:</b> <span style="color:#777;">Cube=6a²</span>
+    </p>
+  </div>
+
+  <div id="coordinates" class="content">
+    <h2><u>Coordinate Geometry</u></h2>
+    <p>Points on plane represented as (x,y).<br><br>
+      <b>Example:</b> <span style="color:#777;">Distance formula between (x1,y1) & (x2,y2)</span>
+    </p>
+  </div>
+
+  <div id="linear" class="content">
+    <h2><u>Linear Equations</u></h2>
+    <p>First-degree equations in x (straight line).<br><br>
+      <b>Example:</b> <span style="color:#777;">y=mx+c</span>
+    </p>
+  </div>
+
+  <div id="quadratic" class="content">
+    <h2><u>Quadratic Equations</u></h2>
+    <p>Second-degree polynomial ax²+bx+c=0; solve with formula.<br><br>
+      <b>Example:</b> <span style="color:#777;">x = (-b ± √(b²-4ac))/2a</span>
+    </p>
+  </div>
+
+  <div id="arithseq" class="content">
+    <h2><u>Arithmetic Sequence</u></h2>
+    <p>Sequence with constant difference d.<br><br>
+      <b>Example:</b> <span style="color:#777;">a, a+d, a+2d...</span>
+    </p>
+  </div>
+
+  <div id="geogseq" class="content">
+    <h2><u>Geometric Sequence</u></h2>
+    <p>Each term multiplied by common ratio r.<br><br>
+      <b>Example:</b> <span style="color:#777;">a, ar, ar²...</span>
+    </p>
+  </div>
+
+  <div id="patterns" class="content">
+    <h2><u>Number Patterns</u></h2>
+    <p>Recognising sequences and rules.<br><br>
+      <b>Example:</b> <span style="color:#777;">2,4,8,16 (×2)</span>
+    </p>
+  </div>
+
+  <div id="symmetry" class="content">
+    <h2><u>Symmetry</u></h2>
+    <p>Object identical on both sides of line/axis.<br><br>
+      <b>Example:</b> <span style="color:#777;">Mirror symmetry</span>
+    </p>
+  </div>
+
+  <div id="mensuration" class="content">
+    <h2><u>Mensuration</u></h2>
+    <p>Measurement of areas, volumes and surfaces.<br><br>
+      <b>Example:</b> <span style="color:#777;">Area & volume formulas</span>
+    </p>
+  </div>
+
+  <div id="timework" class="content">
+    <h2><u>Time & Work</u></h2>
+    <p>Problems relating time, work and efficiency.<br><br>
+      <b>Example:</b> <span style="color:#777;">If A does job in 5 days, A's 1-day work = 1/5</span>
+    </p>
+  </div>
+
+  <div id="advprop" class="content">
+    <h2><u>Ratio & Proportion (Advanced)</u></h2>
+    <p>Detailed proportional reasoning, direct/inverse proportion.<br><br>
+      <b>Example:</b> <span style="color:#777;">a/b = c/d</span>
+    </p>
+  </div>
+
+  <div id="trigonometry" class="content">
+    <h2><u>Trigonometry (Basic)</u></h2>
+    <p>Relations between angles and sides of right triangles.<br><br>
+      <b>Primary ratios:</b> <span style="color:#777;">sin, cos, tan</span>
+    </p>
+  </div>
+
+  <div id="algidentities" class="content">
+    <h2><u>Algebraic Identities</u></h2>
+    <p>Key identities useful for simplification.<br><br>
+      <b>Examples:</b> <span style="color:#777;">(a+b)², (a-b)², a²-b²</span>
+    </p>
+  </div>
+
+  <footer style="max-width:920px;margin:18px auto;text-align:left;color:#555;padding:10px;">
+    <!-- <p><strong>Tip:</strong> Use the buttons to open each topic. Examples are shown in light grey.</p> -->
+  </footer>
+</body>
+</html>

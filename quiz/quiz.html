@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz & Puzzle Zone</title>
+  <link rel="stylesheet" href="../astyles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fbe9e7;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .quiz-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 30px;
+      max-width: 600px;
+      margin: 50px auto;
+    }
+
+    h2 {
+      color: #b40680;
+    }
+
+    .option {
+      display: block;
+      background: #b40680;
+      color: white;
+      margin: 10px auto;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 80%;
+      max-width: 400px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .option:hover {
+      background: #d41494;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: green;
+    }
+
+    #next-btn {
+      background-color: #0bc0e4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #next-btn:hover {
+      background-color: #099fc5;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      background: #b40680;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #70034a;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="title"><h1>🧩 Quiz & Puzzle Zone</h1></div>
+  </div>
+
+  <a href="../index.html" class="back-btn">⬅ Back to Home</a>
+
+  <div class="quiz-container">
+    <h2 id="question">Loading Question...</h2>
+    <div id="options"></div>
+    <p id="result"></p>
+    <button id="next-btn" onclick="nextQuestion()">Next ➡</button>
+  </div>
+
+  <script>
+    const quizData = [
+      { q: "What is the capital of Karnataka?", options: ["Bengaluru", "Mysuru", "Hubballi"], answer: "Bengaluru" },
+      { q: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Venus"], answer: "Mars" },
+      { q: "What is 5 × 6?", options: ["30", "56", "25"], answer: "30" },
+      { q: "Who wrote 'Ramayana'?", options: ["Valmiki", "Tulsidas", "Kalidasa"], answer: "Valmiki" },
+      { q: "Which gas do plants release during photosynthesis?", options: ["Oxygen", "Carbon Dioxide", "Nitrogen"], answer: "Oxygen" },
+      { q: "Who is known as the Father of the Nation (India)?", options: ["Jawaharlal Nehru", "Mahatma Gandhi", "B. R. Ambedkar"], answer: "Mahatma Gandhi" },
+      { q: "What is the largest planet in our solar system?", options: ["Earth", "Saturn", "Jupiter"], answer: "Jupiter" },
+      { q: "Which shape has 3 sides?", options: ["Square", "Triangle", "Circle"], answer: "Triangle" },
+      { q: "What is the national animal of India?", options: ["Lion", "Tiger", "Elephant"], answer: "Tiger" },
+      { q: "What is H2O commonly known as?", options: ["Salt", "Water", "Oxygen"], answer: "Water" },
+      { q: "Which festival is known as the festival of lights?", options: ["Diwali", "Holi", "Eid"], answer: "Diwali" },
+      { q: "Which color is made by mixing red and blue?", options: ["Purple", "Green", "Orange"], answer: "Purple" },
+      { q: "What is 12 ÷ 3?", options: ["4", "6", "3"], answer: "4" },
+      { q: "Who invented the telephone?", options: ["Alexander Graham Bell", "Edison", "Newton"], answer: "Alexander Graham Bell" },
+      { q: "Which is the smallest continent?", options: ["Asia", "Europe", "Australia"], answer: "Australia" },
+      { q: "Which organ pumps blood in the human body?", options: ["Brain", "Heart", "Lungs"], answer: "Heart" },
+      { q: "How many days are there in a leap year?", options: ["365", "366", "364"], answer: "366" },
+      { q: "Which is the fastest land animal?", options: ["Cheetah", "Horse", "Tiger"], answer: "Cheetah" },
+      { q: "What is the value of π (Pi) approximately?", options: ["3.14", "2.14", "4.13"], answer: "3.14" },
+      { q: "Which language is spoken in Karnataka?", options: ["Hindi", "Tamil", "Kannada"], answer: "Kannada" },
+      { q: "Which river flows through Karnataka?", options: ["Ganga", "Krishna", "Godavari"], answer: "Krishna" },
+      { q: "What is the national bird of India?", options: ["Sparrow", "Peacock", "Crow"], answer: "Peacock" },
+      { q: "Which sport is Sachin Tendulkar famous for?", options: ["Hockey", "Football", "Cricket"], answer: "Cricket" },
+      { q: "Which device is used to measure temperature?", options: ["Barometer", "Thermometer", "Speedometer"], answer: "Thermometer" },
+      { q: "How many colors are there in a rainbow?", options: ["6", "7", "8"], answer: "7" },
+      { q: "Which metal is liquid at room temperature?", options: ["Mercury", "Iron", "Gold"], answer: "Mercury" },
+      { q: "Who was the first Prime Minister of India?", options: ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel"], answer: "Jawaharlal Nehru" },
+      { q: "Which festival marks the harvest season?", options: ["Diwali", "Pongal", "Raksha Bandhan"], answer: "Pongal" },
+      { q: "What is the national currency of India?", options: ["Dollar", "Euro", "Rupee"], answer: "Rupee" },
+      { q: "Which planet is closest to the Sun?", options: ["Mercury", "Venus", "Mars"], answer: "Mercury" }
+    ];
+
+    // RANDOMIZE QUESTION ORDER
+    let questions = [...quizData].sort(() => Math.random() - 0.5);
+    let currentQuestion = 0;
+
+    function shuffleArray(arr) {
+      return arr.sort(() => Math.random() - 0.5);
+    }
+
+    function loadQuestion() {
+      const questionData = questions[currentQuestion];
+
+      document.getElementById("question").innerText = questionData.q;
+
+      const optionsContainer = document.getElementById("options");
+      optionsContainer.innerHTML = "";
+
+      // Shuffle options for each question
+      const shuffledOptions = shuffleArray([...questionData.options]);
+
+      shuffledOptions.forEach(option => {
+        const btn = document.createElement("button");
+        btn.classList.add("option");
+        btn.textContent = option;
+        btn.onclick = () => checkAnswer(btn, questionData.answer);
+        optionsContainer.appendChild(btn);
+      });
+
+      document.getElementById("result").textContent = "";
+    }
+
+    function checkAnswer(btn, correct) {
+      const result = document.getElementById("result");
+      if (btn.textContent === correct) {
+        result.textContent = "✅ Correct!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "❌ Wrong!";
+        result.style.color = "red";
+      }
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion >= questions.length) {
+        document.querySelector(".quiz-container").innerHTML = `
+          <h2>🎉 You've completed the quiz!</h2>
+          <p>You answered all ${questions.length} questions!</p>
+          <a href="../index.html" class="back-btn">🏠 Go to Home</a>`;
+      } else {
+        loadQuestion();
+      }
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html>
