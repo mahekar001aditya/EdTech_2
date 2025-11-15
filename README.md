@@ -11,6 +11,8 @@
 
 ## 🖼️ Project Screenshots
 
+## 🖼️ Project Screenshots
+
 ### Home Page
 ![Home Page (English)](imgg/edt1.png) | ![Home Page (Kannada)](imgg/edt2.png)
 --- | ---
@@ -47,10 +49,12 @@
 --- | ---
 **Famous Personality Details** | **Jnanapitha Winners**
 
-### Award Winners
-![Jnanapitha Winner Details](imgg/edt17.png) | 
---- | ---
-**Jnanapitha Winner Details** | 
+---
+
+### Award Winners  
+**Jnanapitha Winner Details**
+
+![Jnanapitha Winner Details](imgg/edt17.png)
 
 
 
