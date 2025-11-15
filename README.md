@@ -1,7 +1,7 @@
 
 # 📘 EdTech Project Documentation
 ## Web Technology Subject Project
----
+
 ## 📚 Project Details
 - **Subject:** Web Technology  
 - **Languages Used:** HTML, CSS, JavaScript  
