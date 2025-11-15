@@ -11,7 +11,7 @@
 
 ## 🖼️ Project Screenshots
 
-![Home Page (English)](imgg/p41.png) | ![Home Page (Kannada)](imgg/edt2.png)
+![Home Page (English)](imgg/edt11.png) | ![Home Page (Kannada)](imgg/edt2.png)
 --- | ---
 **Home Page (English)** | **Home Page (Kannada)**
 
