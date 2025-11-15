@@ -11,10 +11,12 @@
 
 ## 🖼️ Project Screenshots
 
+### Home Page
 ![Home Page (English)](imgg/edt1.png) | ![Home Page (Kannada)](imgg/edt2.png)
 --- | ---
 **Home Page (English)** | **Home Page (Kannada)**
 
+### Grammar Sections
 ![ಕನ್ನಡ ವ್ಯಾಕರಣ ವಿಭಾಗ](imgg/edt3.png) | ![English Grammar Section](imgg/edt4.png)
 --- | ---
 **ಕನ್ನಡ ವ್ಯಾಕರಣ ವಿಭಾಗ** | **English Grammar Section**
@@ -23,6 +25,7 @@
 --- | ---
 **हिन्दी व्याकरण विभाग** | **Maths Formula Section**
 
+### Maths Formula & Quiz
 ![Maths Formula (Opened)](imgg/edt7.png) | ![MCQ Quiz](imgg/edt8.png)
 --- | ---
 **Maths Formula (Opened)** | **MCQ Quiz**
@@ -35,6 +38,7 @@
 --- | ---
 **MCQ Completed** | **Tourist Places Section**
 
+### Tourist Places & Personalities
 ![Tourist Place Details](imgg/edt13.png) | ![Famous Personalities Section](imgg/edt14.png)
 --- | ---
 **Tourist Place Details** | **Famous Personalities Section**
@@ -43,10 +47,11 @@
 --- | ---
 **Famous Personality Details** | **Jnanapitha Winners**
 
+### Award Winners
 ![Jnanapitha Winner Details](imgg/edt17.png) | 
 --- | ---
 **Jnanapitha Winner Details** | 
---- |
+
 
 
 ### 🌐 Live Demo  
