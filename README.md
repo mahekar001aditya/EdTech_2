@@ -11,45 +11,42 @@
 
 ## 🖼️ Project Screenshots
 
-## 🖼️ Project Screenshots
-
-### Home Page
+**Home Page (English)** | **Home Page (Kannada)**
 ![Home Page (English)](imgg/edt1.png) | ![Home Page (Kannada)](imgg/edt2.png)
 --- | ---
-**Home Page (English)** | **Home Page (Kannada)**
 
-### Grammar Sections
+**ಕನ್ನಡ ವ್ಯಾಕರಣ ವಿಭಾಗ** | **English Grammar Section**
 ![ಕನ್ನಡ ವ್ಯಾಕರಣ ವಿಭಾಗ](imgg/edt3.png) | ![English Grammar Section](imgg/edt4.png)
 --- | ---
-**ಕನ್ನಡ ವ್ಯಾಕರಣ ವಿಭಾಗ** | **English Grammar Section**
 
+**हिन्दी व्याकरण विभाग** | **Maths Formula Section**
 ![हिन्दी व्याकरण विभाग](imgg/edt5.png) | ![Maths Formula Section](imgg/edt6.png)
 --- | ---
-**हिन्दी व्याकरण विभाग** | **Maths Formula Section**
 
-### Maths Formula & Quiz
+**Maths Formula (Opened)** | **MCQ Quiz**
 ![Maths Formula (Opened)](imgg/edt7.png) | ![MCQ Quiz](imgg/edt8.png)
 --- | ---
-**Maths Formula (Opened)** | **MCQ Quiz**
 
+**MCQ Correct** | **MCQ Wrong**
 ![MCQ Correct](imgg/edt9.png) | ![MCQ Wrong](imgg/edt10.png)
 --- | ---
-**MCQ Correct** | **MCQ Wrong**
 
+**MCQ Completed** | **Tourist Places Section**
 ![MCQ Completed](imgg/edt11.png) | ![Tourist Places Section](imgg/edt12.png)
 --- | ---
-**MCQ Completed** | **Tourist Places Section**
 
-### Tourist Places & Personalities
+**Tourist Place Details** | **Famous Personalities Section**
 ![Tourist Place Details](imgg/edt13.png) | ![Famous Personalities Section](imgg/edt14.png)
 --- | ---
-**Tourist Place Details** | **Famous Personalities Section**
 
+**Famous Personality Details** | **Jnanapitha Winners**
 ![Famous Personality Details](imgg/edt15.png) | ![Jnanapitha Winners](imgg/edt16.png)
 --- | ---
-**Famous Personality Details** | **Jnanapitha Winners**
 
----
+**Jnanapitha Winner Details** |
+![Jnanapitha Winner Details](imgg/edt17.png) |
+--- |
+
 
 ### Award Winners  
 **Jnanapitha Winner Details**
