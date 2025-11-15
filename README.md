@@ -43,11 +43,10 @@
 --- | ---
 **Famous Personality Details** | **Jnanapitha Winners**
 
-![Jnanapitha Winner Details](imgg/edt17.png)
+![Jnanapitha Winner Details](imgg/edt17.png) | 
 --- | ---
-**Jnanapitha Winner Details** |
-
----
+**Jnanapitha Winner Details** | 
+--- |
 
 
 ### 🌐 Live Demo  
